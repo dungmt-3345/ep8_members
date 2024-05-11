@@ -42,5 +42,4 @@ module Errors
           default: detail
       end
     end
-  end
-  
+end
