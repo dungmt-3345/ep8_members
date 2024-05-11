@@ -39,5 +39,5 @@ class ValidationErrorSerializer
     def underscored_resource_name
       @record.class.to_s.gsub("::", "").underscore
     end
-  end
+end
   
