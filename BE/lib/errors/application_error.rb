@@ -20,4 +20,3 @@ module Errors
       end
     end
   end
-  
