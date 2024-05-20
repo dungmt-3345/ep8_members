@@ -2,13 +2,14 @@ class ApplicationController < ActionController::Base
   rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity_response
   rescue_from ActiveRecord::RecordNotFound, with: :render_record_not_found_response
   rescue_from(
-  Errors::Runtime::StandarError,
-  Errors::Runtime::ActionFailed,
-  Errors::Runtime::ServiceFailed,
-  with: :render_runtime_error_response
+    Errors::Runtime::StandarError,
+    Errors::Runtime::ActionFailed,
+    Errors::Runtime::ServiceFailed,
+    with: :render_runtime_error_response
   )
 
   protected
+
   def render_unprocessable_entity_response error, status: :unprocessable_entity
     render json: Errors::ActiveRecordValidation.new(error.record).to_hash, status: status
   end

@@ -19,7 +19,7 @@ module Errors
           message: message
         }
       ]
-      end
+    end
   
     private
     def message
@@ -41,5 +41,5 @@ module Errors
           scope: [:api, :errors, :code],
           default: detail
     end
-    end
+  end
 end  

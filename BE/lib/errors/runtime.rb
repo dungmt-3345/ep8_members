@@ -12,6 +12,7 @@ module Errors
         end
   
         private
+  
         def i18n_scope
           backtrace = caller 0, 5
           matches_file = backtrace.last.match(file_path_regex) || backtrace[2].match(file_path_regex)
@@ -58,4 +59,4 @@ module Errors
         end
       end
     end
-end  
+  end
