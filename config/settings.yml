@@ -6,3 +6,10 @@ pagy:
     - vars
     - overflow
     - params
+user:
+  max_length:
+    name_roma: 30
+    name_kata: 50
+    email: 255
+    address: 255
+  regex_email: !ruby/regexp '^[\w-\.]+@sun-asterisk.com'
