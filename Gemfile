@@ -7,6 +7,7 @@ gem "active_model_serializers"
 gem "bootsnap", require: false
 gem "config"
 gem "figaro"
+gem "image_processing", ">= 1.2"
 gem "importmap-rails"
 gem "jbuilder"
 gem "pagy"
