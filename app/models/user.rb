@@ -11,6 +11,6 @@ class User < ApplicationRecord
   validates :name_kata, length: {maximum: Settings.user.max_length.name_kata}
   validates :email, length: {maximum: Settings.user.max_length.email},
                     presence: true, uniqueness: true,
-                    format: {with: Settings.user.regex_email}
+                    format: {with: Settings.user.regex.email}
   validates :address, length: {maximum: Settings.user.max_length.address}
 end
