@@ -12,4 +12,5 @@ user:
     name_kata: 50
     email: 255
     address: 255
-  regex_email: !ruby/regexp '^[\w-\.]+@sun-asterisk.com'
+  regex:
+    email: !ruby/regexp '/\A[^@\s]+@[^@\s]+@sun-asterisk\.com\z/'
