@@ -2,10 +2,9 @@
 
 module Api
   class BaseError < StandardError
-    attr_reader :message, :code
+    attr_reader :message
 
-    def initialize code: nil, message: nil
-      @code = code
+    def initialize message
       @message = message
     end
 
@@ -15,6 +14,14 @@ module Api
 
     def to_hash
       {errors: serialize}
+    end
+
+    def code
+      base_key = message.to_s.split(".").last
+
+      I18n.t base_key,
+             scope: [:errors, :code],
+             default: base_key.to_s
     end
   end
 
