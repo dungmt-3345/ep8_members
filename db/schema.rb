@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_05_26_125835) do
+ActiveRecord::Schema[7.1].define(version: 2024_05_28_011542) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -42,6 +42,16 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_26_125835) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
+  create_table "tokens", force: :cascade do |t|
+    t.string "access_token", null: false
+    t.datetime "access_token_expires_at", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["access_token"], name: "index_tokens_on_access_token", unique: true
+    t.index ["user_id"], name: "index_tokens_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "name_roma", limit: 30
     t.string "name_kata", limit: 50
@@ -51,6 +61,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_26_125835) do
     t.integer "original_role"
     t.integer "training_role"
     t.integer "role"
+    t.string "provider"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
@@ -58,4 +69,5 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_26_125835) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "tokens", "users"
 end

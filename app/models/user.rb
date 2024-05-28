@@ -2,6 +2,7 @@
 
 class User < ApplicationRecord
   has_one_attached :avatar
+  has_many :tokens, dependent: :destroy
 
   enum :original_role, {engineer: 0, brse: 1}
   enum :training_role, {be: 0, fe: 1, mobile: 2}
@@ -13,4 +14,13 @@ class User < ApplicationRecord
                     presence: true, uniqueness: true,
                     format: {with: Settings.user.regex.email}
   validates :address, length: {maximum: Settings.user.max_length.address}
+
+  def self.create_user_for_google data
+    where(email: data["email"], provider: "google_oauth2").first_or_initialize.tap do |user|
+      user.provider = "google_oauth2"
+      user.email = data["email"]
+      user.name_roma = data["name"]
+      user.save!
+    end
+  end
 end
