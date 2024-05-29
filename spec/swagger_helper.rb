@@ -26,6 +26,46 @@ shared_components = {
         url: {type: :string, example: "https://odori-park.jp/", description: "URL of the Custom data's website"}
       }
     },
+    detail_progose: {
+      type: :object,
+      properties: {
+        date_test: { type: :string, format: :date, example: "2024-05-30", description: "Date of the test in YYYY-MM-DD format"},
+        range: { type: :integer, example: 1, description: "Range score (integer between 1 and 5)" },
+        range_evaluation: { type: :string, example: "Good", description: "Evaluation of range score" },
+        accuracy: {type: :integer, example: 2, description: "Accuracy score (integer between 1 and 5)" },
+        accuracy_evaluation: { type: :string, example: "Needs improvement", description: "Evaluation of accuracy score" },
+        fluency: { type: :intege, example: 3, description: "Fluency score (integer between 1 and 5)" },
+        fluency_evaluation: { type: :string, example: "Needs improvement", description: "Evaluation of fluency score" },
+        interaction: { type: :integer, example: 4, description: "Interaction score (integer between 1 and 5)" },
+        interaction_evaluation: { type: :string, example: "Needs improvement, excellent", description: "Evaluation of interaction score" },
+        coherence: { type: :integer, example: 5, description: "Coherence score (integer between 1 and 5)" },
+        coherence_evaluation: { type: :string, example: "Average, Needs improvement", description: "Evaluation of coherence score" },
+        phonology: { type: :integer, example: 6, description: "Phonology score (integer between 1 and 5)" },
+        phonology_evaluation: { type: :string, example: "Very good", description: "Evaluation of phonology score" },
+        overall: { type: :integer, example: 1, description: "Overall score (integer between 1 and 5)" },
+        overall_evaluation: { type: :string, example: "Above average", description: "Overall evaluation summary" }
+      }
+    },
+    basic_progose: {
+      type: :object,
+      properties: {
+        date_test: { type: :string, format: :date, example: "2024-05-30", description: "Date of the test in YYYY-MM-DD format"},
+        range: { type: :integer, example: 1, description: "Range score (integer between 1 and 5)" },
+        range_evaluation: { type: :string, example: "Good", description: "Evaluation of range score" },
+        accuracy: {type: :integer, example: 2, description: "Accuracy score (integer between 1 and 5)" },
+        accuracy_evaluation: { type: :string, example: "Needs improvement", description: "Evaluation of accuracy score" },
+        fluency: { type: :intege, example: 3, description: "Fluency score (integer between 1 and 5)" },
+        fluency_evaluation: { type: :string, example: "Needs improvement", description: "Evaluation of fluency score" },
+        interaction: { type: :integer, example: 4, description: "Interaction score (integer between 1 and 5)" },
+        interaction_evaluation: { type: :string, example: "Needs improvement, excellent", description: "Evaluation of interaction score" },
+        coherence: { type: :integer, example: 5, description: "Coherence score (integer between 1 and 5)" },
+        coherence_evaluation: { type: :string, example: "Average, Needs improvement", description: "Evaluation of coherence score" },
+        phonology: { type: :integer, example: 6, description: "Phonology score (integer between 1 and 5)" },
+        phonology_evaluation: { type: :string, example: "Very good", description: "Evaluation of phonology score" },
+        overall: { type: :integer, example: 1, description: "Overall score (integer between 1 and 5)" },
+        overall_evaluation: { type: :string, example: "Above average", description: "Overall evaluation summary" }
+      }
+    },
     server_error: {
       type: :object,
       properties: {
