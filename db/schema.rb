@@ -40,6 +40,27 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_26_125835) do
     t.bigint "blob_id", null: false
     t.string "variation_digest", null: false
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
+
+  create_table "progoses", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.date "date_test", null: false
+    t.integer "range", null: false
+    t.text "range_evaluation"
+    t.integer "accuracy", null: false
+    t.text "accuracy_evaluation"
+    t.integer "fluency", null: false
+    t.text "fluency_evaluation"
+    t.integer "interaction", null: false
+    t.text "interaction_evaluation"
+    t.integer "coherence", null: false
+    t.text "coherence_evaluation"
+    t.integer "phonology", null: false
+    t.text "phonology_evaluation"
+    t.integer "overall", null: false
+    t.text "overall_evaluation"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_progoses_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -58,4 +79,5 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_26_125835) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "progoses", "users"
 end
