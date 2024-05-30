@@ -4,6 +4,12 @@ class Progose < ApplicationRecord
   belongs_to :user
 
   validates :date_test, presence: true
+  validates :range, :range_evaluation, :accuracy, :accuracy_evaluation, :fluency,
+            :fluency_evaluation, :interaction, :interaction_evaluation, :coherence,
+            :coherence_evaluation, :phonology, :phonology_evaluation, :overall,
+            :overall_evaluation, presence: true
+
+  scope :newest, -> { order(id: :desc) }
 
   [:range, :accuracy, :fluency, :interaction, :coherence, :phonology].each do |attribute|
     enum_attribute = {
@@ -21,4 +27,9 @@ class Progose < ApplicationRecord
     C1: 9, C1_high: 10,
     C2: 11, C2_high: 12
   }, _suffix: true
+
+  PROGOSE_CREATE_ATTRS = %i(date_test range range_evaluation accuracy accuracy_evaluation
+                            fluency fluency_evaluation interaction interaction_evaluation
+                            coherence coherence_evaluation phonology phonology_evaluation
+                            overall overall_evaluation).freeze
 end

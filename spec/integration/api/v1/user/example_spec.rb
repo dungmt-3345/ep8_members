@@ -10,7 +10,7 @@ describe "API: Example" do
       produces "application/json"
       parameter name: "Accept-Language", in: :header, type: :string, example: "ja"
       parameter name: :example_id, required: true, in: :path, example: "1", description: "Prefecture ID"
-      security [ bearer_auth: [] ]
+      security [bearer_auth: []]
       parameter name: :params, required: true, in: :body, schema: {
         type: :object,
         properties: {
@@ -25,12 +25,11 @@ describe "API: Example" do
       response "200", "OK" do
         schema type: :object,
                properties: {
-                example: {
+                 example: {
                    type: :object,
                    "$ref" => "#/components/schemas/detail_example"
                  }
                }
-
         xit
       end
 
@@ -67,7 +66,7 @@ describe "API: Example" do
       consumes "application/json"
       produces "application/json"
       parameter name: "Accept-Language", in: :header, type: :string, example: "ja"
-      security [ bearer_auth: [] ]
+      security [bearer_auth: []]
       parameter name: :id, required: true, in: :path, example: "1", description: "Example ID"
 
       response "200", "OK" do
@@ -104,7 +103,7 @@ describe "API: Example" do
       consumes "application/json"
       produces "application/json"
       parameter name: "Accept-Language", in: :header, type: :string, example: "ja"
-      security [ bearer_auth: [] ]
+      security [bearer_auth: []]
       parameter name: :page, in: :query, type: :integer, example: 1, description: "Page number of list items"
 
       response "200", "OK" do
