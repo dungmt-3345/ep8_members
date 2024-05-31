@@ -6,9 +6,8 @@ class Api::V1::User::SessionsController < ActionController::API
     token_info = google_service.get_token_info
 
     resource = User.create_user_for_google(token_info)
+    tokens = resource.create_new_auth_token
     response_with resource
-  rescue StandardError => e
-    render json: {error: e.message}, status: :unprocessable_entity
   end
 
   private
