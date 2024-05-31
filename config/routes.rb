@@ -7,17 +7,9 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-<<<<<<< Updated upstream
-      namespace :user do
-        resource :sessions, only: [:create]
-=======
       namespace :users do
         resources :progoses, only: [:create, :index, :show]
         resources :sessions, only: [:create]
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
       end
     end
   end
