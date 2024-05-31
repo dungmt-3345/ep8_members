@@ -14,6 +14,9 @@ Rails.application.routes.draw do
       namespace :users do
         resources :progoses, only: [:create, :index, :show]
         resources :sessions, only: [:create]
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
       end
     end

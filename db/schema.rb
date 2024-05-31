@@ -62,6 +62,16 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_28_011542) do
     t.index ["user_id"], name: "index_tokens_on_user_id"
   end
 
+  create_table "tokens", force: :cascade do |t|
+    t.string "access_token", null: false
+    t.datetime "access_token_expires_at", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["access_token"], name: "index_tokens_on_access_token", unique: true
+    t.index ["user_id"], name: "index_tokens_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "name_roma", limit: 30
     t.string "name_kata", limit: 50
@@ -82,6 +92,9 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_28_011542) do
 <<<<<<< Updated upstream
 =======
   add_foreign_key "progoses", "users"
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
   add_foreign_key "tokens", "users"
 end

@@ -16,7 +16,11 @@ RSpec.configure do |config|
   # the root example_group in your specs, e.g. describe '...', openapi_spec: 'v2/swagger.json'
   config.openapi_specs = {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     'v1/swagger.yaml' => {
+=======
+     'v1/swagger.yaml' => {
+>>>>>>> Stashed changes
 =======
      'v1/swagger.yaml' => {
 >>>>>>> Stashed changes
