@@ -2,6 +2,7 @@ ja:
   errors:
     something_went_wrong:
        message: エラーが発生しました。
+       code: E-00001
     format: "%{attribute}%{message}"
     messages:
       content_type_invalid: PNG,JPG形式の画像をアップロードしてください。

@@ -1,5 +1,7 @@
 ja:
   service:
     errors:
-      authenticate: 
-        google_invalid_account: "Googleのアカウントが無効になりました。"
+      authenticate:
+        google_invalid_account:
+          message: Googleのアカウントが無効になりました。
+          code: S-00001
