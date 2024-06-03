@@ -14,3 +14,5 @@ user:
     address: 255
   regex:
     email: !ruby/regexp '/\A[^@\s]+@sun-asterisk\.com\z/'
+token: 
+  access_token_expires_at: 24

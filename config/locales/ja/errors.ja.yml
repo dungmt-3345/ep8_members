@@ -60,6 +60,7 @@ ja:
       wrong_length: "M-00026"
       to_many_record: "M-00027"
       record_not_found: "M-00028"
+      google_invalid_account: "M-00029"
     active_record:
       not_found:
         message: 該当する情報は見つかりませんでした。
