@@ -2,25 +2,20 @@
 
 module Api
   class BaseError < StandardError
-    attr_reader :message
+    attr_reader :errors
 
-    def initialize message
-      @message = message
+    def initialize errors
+      @errors = errors
+      @message = errors[:message]
+      @code = errors[:code]
     end
 
     def serialize
-      [{code:, message: @message}]
+      [{code: @code, message: @message}]
     end
 
     def to_hash
       {errors: serialize}
-    end
-
-    def code
-      base_key = message.to_s.split(".").last
-      I18n.t base_key,
-             scope: [:errors, :code],
-             default: base_key.to_s
     end
   end
 
@@ -34,12 +29,12 @@ module Api
       error = I18n.t error_detail, scope: i18n_scope
       @code = error[:code]
       @message = error[:message]
-      error_agrs.each { |k, v| message.gsub!("%{#{k}}", v) }
+      error_agrs.each {|k, v| message.gsub!("%{#{k}}", v)}
     end
 
     private
     def get_i18n_scope
-      file_path.split(%r{/})[3..].map { |e| e.gsub file_suffix, "" }
+      file_path.split(%r{/})[3..].map {|e| e.gsub file_suffix, ""}
     end
 
     def file_path_regex

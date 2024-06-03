@@ -45,7 +45,7 @@ module Api::V1::RescueExceptions
     end
 
     def render_bad_request_controller_response exception, status: :bad_request
-      error = Api::BaseError.new exception.message
+      error = Api::BaseError.new exception.errors
 
       render json: error.to_hash, status:
     end

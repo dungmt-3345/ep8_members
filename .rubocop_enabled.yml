@@ -10,14 +10,14 @@ Style/Alias:
 
 Layout/HashAlignment:
   Description: >-
-    Align the elements of a hash literal if they span more than
-    one line.
+                 Align the elements of a hash literal if they span more than
+                 one line.
   Enabled: true
 
 Layout/ParameterAlignment:
   Description: >-
-    Align the parameters of a method call if they span more
-    than one line.
+                 Align the parameters of a method call if they span more
+                 than one line.
   Enabled: true
 
 Style/AndOr:
@@ -54,9 +54,9 @@ Metrics/BlockNesting:
 
 Style/BlockDelimiters:
   Description: >-
-    Avoid using {...} for multi-line blocks (multiline chaining is
-    always ugly).
-    Prefer {...} over do...end for single-line blocks.
+                Avoid using {...} for multi-line blocks (multiline chaining is
+                always ugly).
+                Prefer {...} over do...end for single-line blocks.
   Enabled: true
 
 Style/CaseEquality:
@@ -97,8 +97,8 @@ Style/ColonMethodCall:
 
 Style/CommentAnnotation:
   Description: >-
-    Checks formatting of special comments
-    (TODO, FIXME, OPTIMIZE, HACK, REVIEW).
+                 Checks formatting of special comments
+                 (TODO, FIXME, OPTIMIZE, HACK, REVIEW).
   Enabled: true
 
 Layout/CommentIndentation:
@@ -191,14 +191,14 @@ Style/GuardClause:
 
 Style/HashSyntax:
   Description: >-
-    Prefer Ruby 1.9 hash syntax { a: 1, b: 2 } over 1.8 syntax
-    { :a => 1, :b => 2 }.
+                 Prefer Ruby 1.9 hash syntax { a: 1, b: 2 } over 1.8 syntax
+                 { :a => 1, :b => 2 }.
   Enabled: true
 
 Style/IfUnlessModifier:
   Description: >-
-    Favor modifier if/unless usage when you have a
-    single-line body.
+                 Favor modifier if/unless usage when you have a
+                 single-line body.
   Enabled: true
 
 Style/IfWithSemicolon:
@@ -215,8 +215,8 @@ Layout/IndentationWidth:
 
 Layout/FirstArrayElementIndentation:
   Description: >-
-    Checks the indentation of the first element in an array
-    literal.
+                 Checks the indentation of the first element in an array
+                 literal.
   Enabled: true
 
 Layout/FirstHashElementIndentation:
@@ -237,8 +237,8 @@ Layout/LeadingCommentSpace:
 
 Style/LineEndConcatenation:
   Description: >-
-    Use \ instead of + or << to concatenate two string literals at
-    line end.
+                 Use \ instead of + or << to concatenate two string literals at
+                 line end.
   Enabled: true
 
 Layout/LineLength:
@@ -251,8 +251,8 @@ Style/MethodCallWithoutArgsParentheses:
 
 Style/MethodDefParentheses:
   Description: >-
-    Checks if the method definitions have or don"t have
-    parentheses.
+                 Checks if the method definitions have or don"t have
+                 parentheses.
   Enabled: true
 
 Style/ModuleFunction:
@@ -269,14 +269,14 @@ Style/MultilineIfThen:
 
 Style/MultilineTernaryOperator:
   Description: >-
-    Avoid multi-line ?: (the ternary operator);
-    use if/unless instead.
+                 Avoid multi-line ?: (the ternary operator);
+                 use if/unless instead.
   Enabled: true
 
 Style/NegatedIf:
   Description: >-
-    Favor unless over if for negative conditions
-    (or control flow or).
+                 Favor unless over if for negative conditions
+                 (or control flow or).
   Enabled: true
 
 Style/NegatedWhile:
@@ -305,14 +305,14 @@ Style/Not:
 
 Style/NumericLiterals:
   Description: >-
-    Add underscores to large numeric literals to improve their
-    readability.
+                 Add underscores to large numeric literals to improve their
+                 readability.
   Enabled: true
 
 Style/OneLineConditional:
   Description: >-
-    Favor the ternary operator(?:) over
-    if/then/else/end constructs.
+                 Favor the ternary operator(?:) over
+                 if/then/else/end constructs.
   Enabled: true
 
 Naming/BinaryOperatorParameterName:
@@ -321,8 +321,8 @@ Naming/BinaryOperatorParameterName:
 
 Style/ParenthesesAroundCondition:
   Description: >-
-    Don't use parentheses around the condition of an
-    if/unless/while.
+                 Don't use parentheses around the condition of an
+                 if/unless/while.
   Enabled: true
 
 Style/PercentLiteralDelimiters:
@@ -359,10 +359,10 @@ Style/RedundantSelf:
 
 Style/RegexpLiteral:
   Description: >-
-    Use %r for regular expressions matching more than
-    `MaxSlashes` '/' characters.
-    Use %r only for regular expressions matching more than
-    `MaxSlashes` '/' character.
+                 Use %r for regular expressions matching more than
+                 `MaxSlashes` '/' characters.
+                 Use %r only for regular expressions matching more than
+                 `MaxSlashes` '/' character.
   Enabled: true
 
 Style/RescueModifier:
@@ -391,8 +391,8 @@ Style/SingleLineMethods:
 
 Layout/SpaceBeforeFirstArg:
   Description: >-
-    Checks that exactly one space is used between a method name
-    and the first argument for method calls without parentheses.
+                 Checks that exactly one space is used between a method name
+                 and the first argument for method calls without parentheses.
   Enabled: true
 
 Layout/SpaceAfterColon:
@@ -409,8 +409,8 @@ Layout/SpaceAroundKeyword:
 
 Layout/SpaceAfterMethodName:
   Description: >-
-    Never put a space between a method name and the opening
-    parenthesis in a method definition.
+                 Never put a space between a method name and the opening
+                 parenthesis in a method definition.
   Enabled: true
 
 Layout/SpaceAfterNot:
@@ -423,10 +423,322 @@ Layout/SpaceAfterSemicolon:
 
 Layout/SpaceBeforeBlockBraces:
   Description: >-
-    Checks that the left block brace have space
-    before it.
+                 Checks that the left block brace have space
+                 before it.
   Enabled: true
 
 Layout/SpaceBeforeComma:
   Description: "No spaces before commas."
+  Enabled: true
+
+Layout/SpaceBeforeComment:
+  Description: >-
+                 Checks for missing space between code and a comment on the
+                 same line.
+  Enabled: true
+
+Layout/SpaceBeforeSemicolon:
+  Description: "No spaces before semicolons."
+  Enabled: true
+
+Layout/SpaceInsideBlockBraces:
+  Description: >-
+                 Checks that block braces have or don't have surrounding space.
+                 For blocks taking parameters, checks that the left brace has
+                 or doesn"t have trailing space.
+  Enabled: true
+  SpaceBeforeBlockParameters: false
+  EnforcedStyle: no_space
+
+Layout/SpaceAroundEqualsInParameterDefault:
+  Description: >-
+                 Checks that the equals signs in parameter default assignments
+                 have or don't have surrounding space depending on
+                 configuration.
+  Enabled: true
+
+Layout/SpaceAroundOperators:
+  Description: "Use spaces around operators."
+  Enabled: true
+
+Layout/SpaceInsideArrayLiteralBrackets:
+  Description: "No spaces after [ or before ]."
+  Enabled: true
+
+Layout/SpaceInsideReferenceBrackets:
+  Enabled: true
+
+Layout/SpaceInsideHashLiteralBraces:
+  Description: "Use spaces inside hash literal braces - or don't."
+  Enabled: true
+
+Layout/SpaceInsideParens:
+  Description: "No spaces after ( or before )."
+  Enabled: true
+
+Style/SpecialGlobalVars:
+  Description: "Avoid Perl-style global variables."
+  Enabled: true
+
+Style/StringLiterals:
+  Description: "Checks if uses of quotes match the configured preference."
+  Enabled: true
+
+Layout/IndentationStyle:
+  Description: "No hard tabs."
+  Enabled: true
+
+Layout/TrailingEmptyLines:
+  Description: "Checks trailing blank lines and final newline."
+  Enabled: true
+
+Style/TrailingCommaInArrayLiteral:
+  Description: "Checks for trailing comma in parameter lists and literals."
+  Enabled: true
+
+Style/TrailingCommaInHashLiteral:
+  Description: "Checks for trailing comma in parameter lists and literals."
+  Enabled: true
+
+Layout/TrailingWhitespace:
+  Description: "Avoid trailing whitespace."
+  Enabled: true
+
+Style/TrivialAccessors:
+  Description: "Prefer attr_* methods to trivial readers/writers."
+  Enabled: true
+
+Style/UnlessElse:
+  Description: >-
+                 Never use unless with else. Rewrite these with the positive
+                 case first.
+  Enabled: true
+
+Style/RedundantCapitalW:
+  Description: "Checks for %W when interpolation is not needed."
+  Enabled: true
+
+Style/CommandLiteral:
+  Description: "Checks for %x when `` would do."
+  Enabled: true
+
+Style/VariableInterpolation:
+  Description: >-
+                 Don't interpolate global, instance and class variables
+                 directly in strings.
+  Enabled: true
+
+Style/WhenThen:
+  Description: "Use when x then ... for one-line cases."
+  Enabled: true
+
+Style/WhileUntilDo:
+  Description: "Checks for redundant do after while or until."
+  Enabled: true
+
+Metrics/BlockLength:
+  Enabled: true
+  Exclude:
+    - app/controllers/concerns/swagger/*
+    - app/models/concerns/swagger/*
+    - spec/**/*
+
+Style/WordArray:
+  Description: "Use %w or %W for arrays of words."
+  Enabled: true
+
+#################### Lint ################################
+### Warnings
+
+Lint/AmbiguousOperator:
+  Description: >-
+                 Checks for ambiguous operators in the first argument of a
+                 method invocation without parentheses.
+  Enabled: true
+
+Lint/AmbiguousRegexpLiteral:
+  Description: >-
+                 Checks for ambiguous regexp literals in the first argument of
+                 a method invocation without parenthesis.
+  Enabled: true
+
+Layout/BlockAlignment:
+  Description: "Align block ends correctly."
+  Enabled: true
+
+Layout/ConditionPosition:
+  Description: "Checks for condition placed in a confusing position relative to the keyword."
+  Enabled: true
+
+Lint/Debugger:
+  Description: "Check for debugger calls."
+  Enabled: true
+
+Layout/DefEndAlignment:
+  Description: "Align ends corresponding to defs correctly."
+  Enabled: true
+
+Lint/DeprecatedClassMethods:
+  Description: "Check for deprecated class method calls."
+  Enabled: true
+
+Lint/ElseLayout:
+  Description: "Check for odd code arrangement in an else block."
+  Enabled: true
+
+Lint/EmptyEnsure:
+  Description: "Checks for empty ensure block."
+  Enabled: true
+
+Lint/EmptyInterpolation:
+  Description: "Checks for empty string interpolation."
+  Enabled: true
+
+Layout/EndAlignment:
+  Description: "Align ends correctly."
+  Enabled: true
+
+Lint/EnsureReturn:
+  Description: "Never use return in an ensure block."
+  Enabled: true
+
+Security/Eval:
+  Description: "The use of eval represents a serious security risk."
+  Enabled: true
+
+Lint/SuppressedException:
+  Description: "Don't suppress exception."
+  Enabled: true
+
+Lint/LiteralAsCondition:
+  Description: "Checks of literals used in conditions."
+  Enabled: true
+
+Lint/LiteralInInterpolation:
+  Description: "Checks for literals used in interpolation."
+  Enabled: true
+
+Lint/Loop:
+  Description: >-
+                 Use Kernel#loop with break rather than begin/end/until or
+                 begin/end/while for post-loop tests.
+  Enabled: true
+
+Lint/ParenthesesAsGroupedExpression:
+  Description: >-
+                 Checks for method calls with a space before the opening
+                 parenthesis.
+  Enabled: true
+
+Lint/RequireParentheses:
+  Description: >-
+                 Use parentheses in the method call to avoid confusion
+                 about precedence.
+  Enabled: true
+
+Lint/RescueException:
+  Description: "Avoid rescuing the Exception class."
+  Enabled: true
+
+Lint/ShadowingOuterLocalVariable:
+  Description: >-
+                 Do not use the same name as outer local variable
+                 for block arguments or block local variables.
+  Enabled: true
+
+Lint/RedundantStringCoercion:
+  Description: "Checks for Object#to_s usage in string interpolation."
+  Enabled: true
+
+Lint/UnderscorePrefixedVariableName:
+  Description: "Do not use prefix `_` for a variable that is used."
+  Enabled: true
+
+Lint/UnusedBlockArgument:
+  Description: "Checks for unused block arguments."
+  Enabled: true
+
+Lint/UnusedMethodArgument:
+  Description: "Checks for unused method arguments."
+  Enabled: true
+
+Lint/UnreachableCode:
+  Description: "Unreachable code."
+  Enabled: true
+
+Lint/UselessAccessModifier:
+  Description: "Checks for useless access modifiers."
+  Enabled: true
+
+Lint/UselessAssignment:
+  Description: "Checks for useless assignment to a local variable."
+  Enabled: true
+
+Lint/BinaryOperatorWithIdenticalOperands:
+  Description: "Checks for comparison of something with itself."
+  Enabled: true
+
+Lint/UselessElseWithoutRescue:
+  Description: "Checks for useless `else` in `begin..end` without `rescue`."
+  Enabled: true
+
+Lint/UselessSetterCall:
+  Description: "Checks for useless setter call to a local variable."
+  Enabled: true
+
+Lint/Void:
+  Description: "Possible use of operator/literal/variable in void context."
+  Enabled: true
+
+Layout/SpaceAroundMethodCallOperator:
+  Description: "Checks method call operators to not have spaces around them."
+  Enabled: true
+
+Lint/RaiseException:
+  Description: "Checks for `raise` or `fail` statements which are raising `Exception` class."
+  Enabled: true
+
+Lint/StructNewOverride:
+  Description: "Disallow overriding the `Struct` built-in methods via `Struct.new`."
+  Enabled: true
+
+Style/ExponentialNotation:
+  Description: "When using exponential notation, favor a mantissa between 1 (inclusive) and 10 (exclusive)."
+  Enabled: true
+
+Layout/SpaceBeforeBrackets:
+  Enabled: true
+Lint/AmbiguousAssignment:
+  Enabled: true
+Lint/DuplicateBranch:
+  Enabled: true
+Lint/DuplicateRegexpCharacterClassElement:
+  Enabled: true
+Lint/EmptyBlock:
+  Enabled: true
+Lint/EmptyClass:
+  Enabled: true
+Lint/NoReturnInBeginEndBlocks:
+  Enabled: true
+Lint/ToEnumArguments:
+  Enabled: true
+Lint/UnexpectedBlockArity:
+  Enabled: true
+Lint/UnmodifiedReduceAccumulator:
+  Enabled: true
+Style/ArgumentsForwarding:
+  Enabled: true
+Style/CollectionCompact:
+  Enabled: true
+Style/DocumentDynamicEvalDefinition:
+  Enabled: true
+Style/HashExcept:
+  Enabled: true
+Style/NegatedIfElseCondition:
+  Enabled: true
+Style/NilLambda:
+  Enabled: true
+Style/RedundantArgument:
+  Enabled: true
+Style/SwapValues:
   Enabled: true

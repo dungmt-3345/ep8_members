@@ -9,12 +9,12 @@ class Progose < ApplicationRecord
             :coherence_evaluation, :phonology, :phonology_evaluation, :overall,
             :overall_evaluation, presence: true
 
-  scope :newest, -> { order(id: :desc) }
+  scope :newest, -> {order(id: :desc)}
 
   [:range, :accuracy, :fluency, :interaction, :coherence, :phonology].each do |attribute|
     enum_attribute = {
       A1: 1, A2: 2, B1: 3, B2: 4, C1: 5, C2: 6
-    }.transform_keys { |key| "#{key}_#{attribute}" }
+    }.transform_keys {|key| "#{key}_#{attribute}"}
 
     enum attribute, enum_attribute, _suffix: true
   end
