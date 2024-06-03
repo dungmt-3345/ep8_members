@@ -18,7 +18,6 @@ module Api
 
     def code
       base_key = message.to_s.split(".").last
-
       I18n.t base_key,
              scope: [:errors, :code],
              default: base_key.to_s

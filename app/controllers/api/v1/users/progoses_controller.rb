@@ -7,7 +7,7 @@ class Api::V1::Users::ProgosesController < Api::BaseController
   def index
     pagy_info, progoses = paginate Progose.newest
 
-    render_jsonapi progoses, type: :basic_info, meta: { pagy_info: pagy_info }
+    render_jsonapi progoses, type: :basic_info, meta: {pagy_info:}
   end
 
   def show

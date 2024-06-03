@@ -1,3 +1,5 @@
 ja:
   service:
     errors:
+      authenticate: 
+        google_invalid_account: "Googleのアカウントが無効になりました。"

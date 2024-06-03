@@ -9,6 +9,7 @@ class CreateUsers < ActiveRecord::Migration[7.1]
       t.integer :original_role
       t.integer :training_role
       t.integer :role
+      t.string :provider
 
       t.timestamps
     end
