@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   namespace :api, format: :json do
     namespace :v1 do
       namespace :users do
-        resources :progoses, only: [:create, :index, :show]
+        resources :progoses, only: %i(create index show update destroy)
 
         scope "/sessions" do     
           post :sign_in, to: "sessions#create"
