@@ -1,1 +1,6 @@
 ja:
+  errors:
+    action: 
+      unauthorized: 
+        message: ログインしてください。
+        code: D-0001

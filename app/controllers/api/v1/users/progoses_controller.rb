@@ -1,11 +1,10 @@
 # frozen_string_literal: true
 
 class Api::V1::Users::ProgosesController < Api::BaseController
-  before_action :set_user, only: [:create]
   before_action :set_progose, only: %i(show update destroy)
 
   def index
-    pagy_info, progoses = paginate Progose.newest
+    pagy_info, progoses = paginate current_user.progoses.newest
 
     render_jsonapi progoses, type: :basic_info, meta: {pagy_info:}
   end
@@ -15,7 +14,7 @@ class Api::V1::Users::ProgosesController < Api::BaseController
   end
 
   def create
-    progose = @user.progoses.create! progose_params
+    progose = current_user.progoses.create! progose_params
 
     render_jsonapi progose, type: :detail_info
   end
@@ -34,12 +33,8 @@ class Api::V1::Users::ProgosesController < Api::BaseController
 
   private
 
-  def set_user
-    @user = User.find(params[:user_id])
-  end
-
   def set_progose
-    @progose = Progose.find(params[:id])
+    @progose = current_user.progoses.find(params[:id])
   end
 
   def progose_params
