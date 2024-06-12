@@ -8,7 +8,6 @@ describe "Progoses API" do
       tags "Progoses"
       consumes "application/json"
       produces "application/json"
-      parameter name: :user_id, required: true, in: :query, example: "1", description: "Users ID"
       security [bearer_auth: []]
       parameter name: :progose, required: true, in: :body, schema: {
         type: :object,
@@ -290,8 +289,8 @@ describe "Progoses API" do
       security [bearer_auth: []]
 
       response "204", "No Content" do
-	        xit
-	      end
+        xit
+      end
 
       response "404", "Not Found" do
         schema "$ref" => "#/components/schemas/not_found"

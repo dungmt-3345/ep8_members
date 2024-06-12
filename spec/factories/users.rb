@@ -7,8 +7,8 @@ FactoryBot.define do
     email {Faker::Internet.email}
     date_of_birth {Faker::Date.birthday(min_age: 18, max_age: 65)}
     address {Faker::Address.full_address}
-    original_role {Faker::Number.between(from: 1, to: 10)}
-    training_role {Faker::Number.between(from: 1, to: 10)}
-    role {Faker::Number.between(from: 1, to: 10)}
+    original_role {Faker::Number.between(from: 0, to: 1)}
+    training_role {Faker::Number.between(from: 0, to: 2)}
+    role {Faker::Number.between(from: 0, to: 1)}
   end
 end

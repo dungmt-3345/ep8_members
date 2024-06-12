@@ -19,6 +19,7 @@ module Api::V1::RescueExceptions
     )
     rescue_from ActiveRecord::RecordNotFound, with: :render_resource_not_found_response
     rescue_from Api::Error::BadRequestController, with: :render_bad_request_controller_response
+    rescue_from Api::Error::Unauthorized, with: :render_invalid_token_response
 
     protected
     def render_unprocessable_entity_response exception, status: :unprocessable_entity
@@ -46,7 +47,11 @@ module Api::V1::RescueExceptions
 
     def render_bad_request_controller_response exception, status: :bad_request
       error = Api::BaseError.new exception.errors
+      render json: error.to_hash, status:
+    end
 
+    def render_invalid_token_response exception, status: :unauthorized
+      error = Api::BaseError.new exception.errors
       render json: error.to_hash, status:
     end
   end

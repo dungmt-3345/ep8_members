@@ -82,5 +82,7 @@ module Api
     end
 
     class BadRequestController < BaseError; end
+
+    class Unauthorized < BaseError; end
   end
 end
