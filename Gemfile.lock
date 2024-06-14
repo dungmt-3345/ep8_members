@@ -155,8 +155,6 @@ GEM
     json-schema (4.3.0)
       addressable (>= 2.8)
     jsonapi-renderer (0.2.2)
-    jwt (2.8.1)
-      base64
     language_server-protocol (3.17.0.3)
     loofah (2.22.0)
       crass (~> 1.0.2)
@@ -332,6 +330,8 @@ GEM
       railties (>= 6.0.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
+    tzinfo-data (1.2024.1)
+      tzinfo (>= 1.0.0)
     unicode-display_width (2.5.0)
     web-console (4.2.1)
       actionview (>= 6.0.0)
@@ -370,7 +370,6 @@ DEPENDENCIES
   importmap-rails
   jbuilder
   json
-  jwt
   pagy
   pg (~> 1.1)
   pry
